@@ -6,14 +6,14 @@ import (
 	"slices"
 )
 
-type album struct {
+type Album struct {
 	Id     int     `json:"id"`
 	Title  string  `json:"title"`
 	Price  float64 `json:"price"`
 	Artist artist  `json:"artist"`
 }
 
-var albums = []album{
+var albums = []Album{
 	{
 		Id:    1,
 		Title: "Reasonable Doubt",
@@ -34,22 +34,22 @@ var albums = []album{
 	},
 }
 
-func GetAlbums() []album {
+func GetAlbums() []Album {
 	return albums
 }
 
-func GetAlbumById(id int) (album, error) {
-	idx := slices.IndexFunc(albums, func(a album) bool {
+func GetAlbumById(id int) (Album, error) {
+	idx := slices.IndexFunc(albums, func(a Album) bool {
 		return a.Id == id
 	})
 	if idx < 0 {
 		err := fmt.Sprintf("Can't find an album with id %v", id)
-		return album{}, errors.New(err)
+		return Album{}, errors.New(err)
 	}
 
 	return albums[idx], nil
 }
 
-func AddAlbum(a album) {
+func AddAlbum(a Album) {
 	albums = append(albums, a)
 }
