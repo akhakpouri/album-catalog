@@ -2,27 +2,6 @@ package album
 
 import "testing"
 
-var albums = []album{
-	{
-		Id:    1,
-		Title: "Reasonable Doubt",
-		Price: 20.00,
-		Artist: artist{
-			Id:   1,
-			Name: "JayZ",
-		},
-	},
-	{
-		Id:    2,
-		Title: "Port Of Miami",
-		Price: 10.00,
-		Artist: artist{
-			Id:   2,
-			Name: "Rick Ross",
-		},
-	},
-}
-
 var noAlbums = []album{}
 
 func TestGet(t *testing.T) {
