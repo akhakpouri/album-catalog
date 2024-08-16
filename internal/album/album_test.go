@@ -2,7 +2,7 @@ package album
 
 import "testing"
 
-var noAlbums = []album{}
+var noAlbums = []Album{}
 
 func TestGet(t *testing.T) {
 	len := len(albums)
@@ -21,7 +21,7 @@ func TestGetFils(t *testing.T) {
 }
 
 func TestPost(t *testing.T) {
-	var album = album{
+	var album = Album{
 		Id:    3,
 		Title: "Black Album",
 		Price: 35,
