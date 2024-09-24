@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"album-catalog/model"
+	"mock-api/model"
 	"net/http"
 	"strconv"
 

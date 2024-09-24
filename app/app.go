@@ -1,7 +1,7 @@
 package app
 
 import (
-	"album-catalog/controller"
+	"mock-api/controller"
 
 	"github.com/gin-gonic/gin"
 )
@@ -15,6 +15,7 @@ func (a *App) CreateRoutes() {
 	router.GET("/albums", controller.GetAlbums)
 	router.GET("/albums/:id", controller.GetAlbumById)
 	router.POST("/album", controller.AddAlbum)
+	router.GET("/health", controller.GetHealth)
 	router.Run()
 	a.Routes = router
 }

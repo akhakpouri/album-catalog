@@ -1,6 +1,6 @@
 package main
 
-import "album-catalog/app"
+import "mock-api/app"
 
 func main() {
 	var a app.App
